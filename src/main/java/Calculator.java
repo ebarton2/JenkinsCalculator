@@ -1,4 +1,5 @@
 import java.util.UUID;
+import java.util.Vector;
 
 class Calculator {
 
@@ -40,11 +41,17 @@ class Calculator {
     etc
      */
     int fibonacciNumberFinder(int n){
-        System.out.println("Something random");
-        if (n < 2) {
-            return n;
+        //System.out.println("N: " + n);
+        int[] x = new int[n];
+        if (n < 2) return n;
+        x[0] = 0;
+        x[1] = 1;
+        for (int i = 2; i < n; ++i) {
+            x[i] = x[i-1] + x[i-2];
         }
-        return fibonacciNumberFinder(n-1) + fibonacciNumberFinder(n-2);
+
+
+        return x[n-1] + x[n-2];
     }
 
 
