@@ -40,6 +40,7 @@ class Calculator {
     etc
      */
     int fibonacciNumberFinder(int n){
+        System.out.println("Something random");
         if (n < 2) {
             return n;
         }
